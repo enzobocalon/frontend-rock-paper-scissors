@@ -12,11 +12,11 @@ export const Container = styled.section`
   justify-content: center;
   flex-direction: column;
 
-  @media screen and (max-width: 1100px){
+  @media screen and (max-width: 1450px){
     width: 70%;
   }
 
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 667px){
     width: 95%;
   }
 
@@ -45,27 +45,34 @@ export const FirstRow = styled.div<IProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: ${props => props.shouldTransition ? '100%' : '50%'};
+  width: ${props => props.shouldTransition ? '85%' : '50%'};
   color: white;
   transition: all .3s ease;
   
   h1{
-    width: 200px;
-    text-align: center;
+    width: 50%;
+    text-align: left;
+    margin-left: 2rem;
     margin-bottom: 2rem;
-}
-
-  @media screen and (max-width: 1650px){
-    width: ${props => props.shouldTransition ? '100%' : '75%'};
+    &:last-child{
+      text-align: right;
+      margin-left: 0;
+    }
   }
 
-  @media screen and (max-width: 575px){
-    width: 100%;
+  @media screen and (max-width: 500px){
+    h1{
+      margin-left: 0;
+      width: 40%;
+      &:last-child{
+        width: 60%;
+      }
+    }
   }
 
   @media screen and (max-width: 390px){
     h1{
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 `
@@ -99,14 +106,15 @@ export const StatusContainer = styled.div<IProps>`
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
-  width: 20%;
+  width: 50%;
 
   h1{
     font-size: 1.25rem;
     color: white;
   }
 
-  @media screen and (max-width: 768px){
+
+  @media screen and (max-width: 900px){
     position: absolute;
     top: 100%;
     left: 50%;

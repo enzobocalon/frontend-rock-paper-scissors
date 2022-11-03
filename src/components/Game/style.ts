@@ -14,11 +14,8 @@ export const Container = styled.section`
   background-size: 50vh;
   background-repeat: no-repeat;
 
-  @media screen and (max-width: 900px){
-    width: 60%;
-  }
 
-  @media screen and (max-width: 750px){
+  @media screen and (max-width: 850px){
     width: 75%;
   }
 
@@ -28,13 +25,6 @@ export const Container = styled.section`
 
   @media screen and (max-width: 450px){
     background-size: 40vh;
-  }
-
-  @media screen and (max-width: 375px){
-    width: 95%;
-  }
-
-  @media screen and (max-width: 330px){
     width: 100%;
   }
 
@@ -45,13 +35,11 @@ export const Container = styled.section`
 
 export const FirstRow = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  height: 50%;
+  width: 100%;
 
   @media screen and (max-width: 1000px){
-    justify-content: space-between;
-  }
-
-  @media screen and (max-width: 800px){
     justify-content: space-between;
   }
 
@@ -76,42 +64,8 @@ export const Border = styled.div<IProps>`
   }
 `
 
-export const Play = styled.div`
-  background-color: white;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: inset 1px 8px 5px 2px rgb(0 0 0 / 20%), 2px 2px 5px rgb(0 0 0 / 10%);
-  transition: all .3s ease;
-
-  &:hover{
-    background-color: rgba(236, 231, 231, 1);
-    transition: all .3s ease;
-  }
-
-  @media screen and (max-width: 450px){
-    width: 130px;
-    height: 130px;
-  }
-`
 
 export const SecondRow = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 6rem;
-
-  @media screen and (max-width: 1000px){
-    margin-top: 4rem;
-  }
-
-  @media screen and (min-width: 2000px){
-    margin-top: 20rem;
-  }
-
-  @media screen and (max-height: 740px){
-    margin-top: 2rem;
-  }
 `

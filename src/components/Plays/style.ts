@@ -18,6 +18,17 @@ export const Border = styled.div<IProps>`
     width: 150px;
     height: 150px;
   }
+
+  @media screen and (max-width: 320px){
+    width: 120px;
+    height: 120px;
+  }
+`
+
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 50%;
 `
 
 export const Play = styled.div`
@@ -39,5 +50,10 @@ export const Play = styled.div`
   @media screen and (max-width: 450px){
     width: 130px;
     height: 130px;
+  }
+
+  @media screen and (max-width: 320px){
+    width: 100px;
+    height: 100px;
   }
 `
