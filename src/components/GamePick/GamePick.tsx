@@ -1,7 +1,11 @@
 import React from 'react'
 import * as S from './style'
 
-const GamePick = () => {
+interface IProps {
+  play: string
+}
+
+const GamePick = ({play}:IProps) => {
   return (
     <div>GamePick</div>
   )
