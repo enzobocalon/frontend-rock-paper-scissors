@@ -15,9 +15,6 @@ const GamePick = ({play, setPick}:IProps) => {
   const {setScore} = useContext(ScoreContext);
   const [houseChoice, setHouseChoice] = useState<string | null>(null);
   const [status, setStatus] = useState<string | null>(null);
-  const paper = ['hsl(230, 89%, 62%)', 'hsl(230, 89%, 65%)'];
-  const scissors = ['hsl(39, 89%, 49%)', 'hsl(40, 84%, 53%)'];
-  const rock = ['hsl(349, 71%, 52%)', 'hsl(349, 70%, 56%)'];
 
   const playAgain = () => {
     setHouseChoice(null);
@@ -72,7 +69,7 @@ const GamePick = ({play, setPick}:IProps) => {
           {
             houseChoice ? 
             houseChoice === 'paper' ? <Paper /> : houseChoice === 'scissors' ? <Scissors /> : <Rock />
-            : <S.Border borderColor={['hsl(229, 25%, 31%)', 'hsl(229, 25%, 31%)']}></S.Border>
+            : <S.Border></S.Border>
           }
       </S.SecondRow>
     </S.Container>

@@ -8,7 +8,7 @@ export const Container = styled.section`
   margin-top: 1rem;
   display: flex;
 
-  @media screen and (max-width: 900px){
+  @media screen and (max-width: 1100px){
     width: 70%;
   }
 
@@ -35,6 +35,13 @@ export const Title = styled.div`
   @media screen and (max-width: 450px){
     width: 100%;
     text-align: center;
+  }
+
+  
+  @media screen and (max-height: 740px){
+   h1{
+    font-size: 1.8rem;
+   } 
   }
 `
 

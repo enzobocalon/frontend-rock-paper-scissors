@@ -110,4 +110,8 @@ export const SecondRow = styled.div`
   @media screen and (min-width: 2000px){
     margin-top: 20rem;
   }
+
+  @media screen and (max-height: 740px){
+    margin-top: 2rem;
+  }
 `

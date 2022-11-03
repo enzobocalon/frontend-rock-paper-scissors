@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 interface IProps {
-  borderColor?: string[];
   shouldTransition?: string | null;
 }
 
@@ -12,10 +11,22 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @media screen and (max-width: 1100px){
+    width: 70%;
+  }
+
+  @media screen and (max-width: 600px){
+    width: 95%;
+  }
+
+  @media screen and (max-height: 740px){
+    height: 40%;
+  }
 `
 
 export const Border = styled.div<IProps>`
-  background-image: ${props => `linear-gradient(${props.borderColor![0]}, ${props.borderColor![1]})`};
+  background-color: hsl(229, 25%, 31%);
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -34,9 +45,8 @@ export const FirstRow = styled.div<IProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: ${props => props.shouldTransition ? '100%' : '50%'};;
+  width: ${props => props.shouldTransition ? '100%' : '50%'};
   color: white;
-  font-size: 1rem;
   transition: all .3s ease;
   
   h1{
@@ -44,6 +54,20 @@ export const FirstRow = styled.div<IProps>`
     text-align: center;
     margin-bottom: 2rem;
 }
+
+  @media screen and (max-width: 1650px){
+    width: ${props => props.shouldTransition ? '100%' : '75%'};
+  }
+
+  @media screen and (max-width: 575px){
+    width: 100%;
+  }
+
+  @media screen and (max-width: 390px){
+    h1{
+      font-size: 1.5rem;
+    }
+  }
 `
 
 export const SecondRow = styled.div<IProps>`
@@ -52,6 +76,19 @@ export const SecondRow = styled.div<IProps>`
   align-items: center;
   justify-content: space-between;
   transition: all .3s ease;
+  position: relative;
+
+  @media screen and (max-width: 1650px){
+    width: ${props => props.shouldTransition ? '100%' : '75%'};
+  }
+
+  @media screen and (max-width: 575px){
+    width: ${props => props.shouldTransition ? '100%' : '80%'};
+  }
+
+  @media screen and (max-width: 390px){
+    width: ${props => props.shouldTransition ? '100%' : '85%'};
+  }
 `
 
 export const StatusContainer = styled.div<IProps>`
@@ -67,6 +104,14 @@ export const StatusContainer = styled.div<IProps>`
   h1{
     font-size: 1.25rem;
     color: white;
+  }
+
+  @media screen and (max-width: 768px){
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
   }
 `
 
