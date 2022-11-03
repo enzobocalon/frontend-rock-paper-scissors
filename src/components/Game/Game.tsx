@@ -6,7 +6,7 @@ import * as S from './style'
 const Game = () => {
   
   const [pick, setPick] = useState<boolean>(false);
-  const [play, setPlay] = useState<string>('');
+  const [play, setPlay] = useState<string | null>(null);
 
   const handlePick = (choice: string) => {
     if (choice) {
@@ -44,7 +44,7 @@ const Game = () => {
           <GameRules />
         </S.Container>
         ) :
-        <GamePick play={play}/>
+        <GamePick play={play} setPick={setPick}/>
       }
     </>
   )

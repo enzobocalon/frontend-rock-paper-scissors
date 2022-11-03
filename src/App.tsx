@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import GameContainer from './components/GameContainer/GameContainer'
-import { ScoreContext } from './context/ScoreContext'
+import { ScoreContext, ScoreProvider } from './context/ScoreContext'
 import { GlobalStyle } from './global'
 
 
 function App() {
   return (
-    <ScoreContext.Provider>
+    <ScoreProvider>
       <GameContainer />
       <GlobalStyle />
-    </ScoreContext.Provider>
+    </ScoreProvider>
   )
 }
 
