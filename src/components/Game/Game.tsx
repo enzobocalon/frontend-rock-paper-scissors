@@ -3,6 +3,11 @@ import GameRules from '../GameRules/GameRules'
 import * as S from './style'
 
 const Game = () => {
+
+  const handlePick = () => {
+    
+  }
+
   return (
     <S.Container>
       <S.FirstRow>
