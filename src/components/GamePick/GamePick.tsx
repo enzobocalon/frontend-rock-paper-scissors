@@ -23,7 +23,16 @@ const GamePick = ({play, setPick}:IProps) => {
 
   const handleWinner = useCallback(() => {
     if (play && houseChoice) {
-
+      if (play === 'rock' && houseChoice === 'scissors' || 
+      play === 'scissors' && houseChoice === 'paper' ||
+      play === 'paper' && houseChoice === 'rock') {
+        setStatus("YOU WIN")
+        setScore(prev => prev+1)
+      } else if (play === houseChoice) {
+        setStatus("DRAW!")
+      } else {
+        setStatus("YOU LOSE")
+      }
     }
   }, [houseChoice])
 
@@ -33,6 +42,10 @@ const GamePick = ({play, setPick}:IProps) => {
       setHouseChoice(choices[Math.floor(Math.random() * 3)]);
     }, 1000)
   }, [])
+
+  useEffect(() => {
+    handleWinner();
+  }, [houseChoice])
 
   return (
     <S.Container>

@@ -85,7 +85,6 @@ export const StatusContainer = styled.div<IProps>`
   flex-direction: column;
   gap: 1rem;
   width: 20%;
-  transition: all .3s ease;
 
   h1{
     font-size: 1.25rem;
