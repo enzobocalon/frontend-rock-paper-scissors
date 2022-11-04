@@ -35,6 +35,7 @@ export const Title = styled.div`
   @media screen and (max-width: 450px){
     width: 100%;
     text-align: center;
+    padding: 1rem;
   }
 
   

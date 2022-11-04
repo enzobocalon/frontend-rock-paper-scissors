@@ -9,6 +9,10 @@ export const Container = styled.section`
   @media screen and (max-width: 800px){
     justify-content: center;
   }
+
+  @media screen and (max-height: 700px){
+    margin-top: 1rem;
+  }
 `
 
 export const Button = styled.button`

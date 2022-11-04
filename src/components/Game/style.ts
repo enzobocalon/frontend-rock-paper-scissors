@@ -26,6 +26,7 @@ export const Container = styled.section`
   @media screen and (max-width: 450px){
     background-size: 40vh;
     width: 100%;
+    margin-top: 1.5rem;
   }
 
   @media screen and (min-width: 2000px){

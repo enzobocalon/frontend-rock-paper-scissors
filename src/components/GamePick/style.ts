@@ -35,9 +35,14 @@ export const Border = styled.div<IProps>`
   justify-content: center;
   cursor: pointer;
 
-  @media screen and (max-width: 450px){
+  @media screen and (max-width: 500px){
     width: 150px;
     height: 150px;
+  }
+
+  @media screen and (max-height: 700px){
+    width: 120px;
+    height: 120px;
   }
 `
 
@@ -61,6 +66,7 @@ export const FirstRow = styled.div<IProps>`
   }
 
   @media screen and (max-width: 500px){
+    width: ${props => props.shouldTransition ? '90%' : '85%'};
     h1{
       margin-left: 0;
       width: 40%;

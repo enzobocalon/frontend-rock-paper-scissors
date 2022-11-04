@@ -14,12 +14,17 @@ export const Border = styled.div<IProps>`
   justify-content: center;
   cursor: pointer;
 
-  @media screen and (max-width: 450px){
+  @media screen and (max-width: 500px){
     width: 150px;
     height: 150px;
   }
 
   @media screen and (max-width: 320px){
+    width: 120px;
+    height: 120px;
+  }
+
+  @media screen and (max-height: 700px){
     width: 120px;
     height: 120px;
   }
@@ -47,12 +52,17 @@ export const Play = styled.div`
     transition: all .3s ease;
   }
 
-  @media screen and (max-width: 450px){
+  @media screen and (max-width: 500px){
     width: 130px;
     height: 130px;
   }
 
   @media screen and (max-width: 320px){
+    width: 100px;
+    height: 100px;
+  }
+
+  @media screen and (max-height: 700px){
     width: 100px;
     height: 100px;
   }
