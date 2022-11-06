@@ -3,6 +3,7 @@ import { ScoreContext } from '../../context/ScoreContext'
 import Paper from '../Plays/Paper'
 import Rock from '../Plays/Rock'
 import Scissors from '../Plays/Scissors'
+import Border from '../Plays/Border'
 import * as S from './style'
 
 interface IProps {
@@ -49,29 +50,26 @@ const GamePick = ({play, setPick}:IProps) => {
 
   return (
     <S.Container>
-      <S.FirstRow shouldTransition={houseChoice}>
-        <h1>YOU PICKED</h1>
-        <h1>THE HOUSE PICKED</h1>
-      </S.FirstRow>
-
-      <S.SecondRow shouldTransition={houseChoice}>
+      <S.Wrapper shouldTransition={houseChoice}>
+        <S.PlayContent>
+          <h1>YOU PICKED</h1>
           {
             play === 'paper' ? <Paper /> : play === 'scissors' ? <Scissors /> : <Rock />
           }
-          {
-            houseChoice ? (
-              <S.StatusContainer shouldTransition={houseChoice}>
+        </S.PlayContent>
+        <S.StatusContainer shouldTransition={houseChoice}>
               <h1>{status}</h1>
               <S.Button onClick={() => playAgain()}>PLAY AGAIN</S.Button>
-            </S.StatusContainer>
-            ) : ''
-          }
+          </S.StatusContainer>
+        <S.PlayContent>
+          <h1>THE HOUSE PICKED</h1>    
           {
             houseChoice ? 
             houseChoice === 'paper' ? <Paper /> : houseChoice === 'scissors' ? <Scissors /> : <Rock />
-            : <S.Border></S.Border>
+            : <Border />
           }
-      </S.SecondRow>
+          </S.PlayContent>
+      </S.Wrapper>
     </S.Container>
   )
 }

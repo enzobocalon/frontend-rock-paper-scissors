@@ -6,40 +6,30 @@ interface IProps {
 
 export const Border = styled.div<IProps>`
   background-image: ${props => `linear-gradient(${props.borderColor![0]}, ${props.borderColor![1]})`};
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 
-  @media screen and (max-width: 500px){
-    width: 150px;
-    height: 150px;
-  }
-
-  @media screen and (max-width: 320px){
-    width: 120px;
-    height: 120px;
-  }
-
-  @media screen and (max-height: 700px){
-    width: 120px;
-    height: 120px;
+  @media screen and (min-width: 500px){
+    width: 200px;
+    height: 200px;
   }
 `
 
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  width: 50%;
+  align-items: center;
 `
 
 export const Play = styled.div`
   background-color: white;
-  width: 180px;
-  height: 180px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -52,18 +42,9 @@ export const Play = styled.div`
     transition: all .3s ease;
   }
 
-  @media screen and (max-width: 500px){
-    width: 130px;
-    height: 130px;
+  @media screen and (min-width: 500px){
+    width: 180px;
+    height: 180px;
   }
 
-  @media screen and (max-width: 320px){
-    width: 100px;
-    height: 100px;
-  }
-
-  @media screen and (max-height: 700px){
-    width: 100px;
-    height: 100px;
-  }
 `

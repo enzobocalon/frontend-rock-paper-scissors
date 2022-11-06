@@ -6,31 +6,19 @@ interface IProps {
 }
 
 export const Container = styled.section`
-  height: 80%;
-  width: 50%;
-  margin-top: 3rem;
+  height: 100%;
+  width: 100%;
   background-image: url(${bgTriangle});
-  background-position: 50% 20%;
-  background-size: 50vh;
+  background-size: 310px;
+  background-position: 50%;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-
-  @media screen and (max-width: 850px){
-    width: 75%;
-  }
-
-  @media screen and (max-width: 600px){
-    width: 90%;
-  }
-
-  @media screen and (max-width: 450px){
-    background-size: 40vh;
-    width: 100%;
-    margin-top: 1.5rem;
-  }
-
-  @media screen and (min-width: 2000px){
-    background-size: 50% 50%;
+  @media screen and (min-width: 500px){
+    background-size: 450px;
   }
 `
 
@@ -40,12 +28,9 @@ export const FirstRow = styled.div`
   height: 50%;
   width: 100%;
 
-  @media screen and (max-width: 1000px){
+  @media screen and (min-width: 500px){
+    width: 500px;
     justify-content: space-between;
-  }
-
-  @media screen and (min-width: 2000px){
-    margin-top: 3rem;
   }
 `
 
@@ -58,11 +43,6 @@ export const Border = styled.div<IProps>`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
-  @media screen and (max-width: 450px){
-    width: 150px;
-    height: 150px;
-  }
 `
 
 

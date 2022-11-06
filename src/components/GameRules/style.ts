@@ -5,14 +5,7 @@ export const Container = styled.section`
   display: flex;
   justify-content: flex-end;
   margin-top: 2rem;
-
-  @media screen and (max-width: 800px){
-    justify-content: center;
-  }
-
-  @media screen and (max-height: 700px){
-    margin-top: 1rem;
-  }
+  padding-right: 2rem;
 `
 
 export const Button = styled.button`

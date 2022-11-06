@@ -5,127 +5,65 @@ interface IProps {
 }
 
 export const Container = styled.section`
-  width: 50%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-
-  @media screen and (max-width: 1450px){
-    width: 70%;
-  }
-
-  @media screen and (max-width: 667px){
-    width: 95%;
-  }
-
-  @media screen and (max-height: 740px){
-    height: 40%;
-  }
+  flex-direction: column-reverse;
 `
-
-export const Border = styled.div<IProps>`
-  background-color: hsl(229, 25%, 31%);
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+export const Wrapper = styled.div<IProps>`
+  width: ${props => props.shouldTransition ? '100%' : '85%'};
   display: flex;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-  @media screen and (max-width: 500px){
-    width: 150px;
-    height: 150px;
-  }
-
-  @media screen and (max-height: 700px){
-    width: 120px;
-    height: 120px;
-  }
-`
-
-export const FirstRow = styled.div<IProps>`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: ${props => props.shouldTransition ? '85%' : '50%'};
-  color: white;
-  transition: all .3s ease;
-  
-  h1{
-    width: 50%;
-    text-align: left;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
-    &:last-child{
-      text-align: right;
-      margin-left: 0;
-    }
-  }
-
-  @media screen and (max-width: 500px){
-    width: ${props => props.shouldTransition ? '90%' : '85%'};
-    h1{
-      margin-left: 0;
-      width: 40%;
-      &:last-child{
-        width: 60%;
-      }
-    }
-  }
-
-  @media screen and (max-width: 390px){
-    h1{
-      font-size: 1.2rem;
-    }
-  }
-`
-
-export const SecondRow = styled.div<IProps>`
-  width: ${props => props.shouldTransition ? '100%' : '50%'};
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: all .3s ease;
   position: relative;
+  transition: width .3s ease;
 
-  @media screen and (max-width: 1650px){
-    width: ${props => props.shouldTransition ? '100%' : '75%'};
+  @media screen and (min-width: 700px){
+    width: ${props => props.shouldTransition ? '100%' : '65%'};
   }
 
-  @media screen and (max-width: 575px){
-    width: ${props => props.shouldTransition ? '100%' : '80%'};
+  @media screen and (min-width: 900px){
+    width: ${props => props.shouldTransition ? '80%' : '65%'};
   }
 
-  @media screen and (max-width: 390px){
-    width: ${props => props.shouldTransition ? '100%' : '85%'};
+  @media screen and (min-width: 1100px){
+    width: ${props => props.shouldTransition ? '65%' : '40%'};
+  }
+`
+
+export const PlayContent = styled.div`
+  display: flex;
+  width: 50%;
+  flex-direction: column-reverse;
+  gap: 1rem;
+  h1{
+    font-size: 1.25rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
   }
 `
 
 export const StatusContainer = styled.div<IProps>`
   opacity: ${props => props.shouldTransition ? '1' : '0'};
   pointer-events: ${props => props.shouldTransition ? 'all' : 'none'};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1rem;
-  width: 50%;
+  text-align: center;
+  width: 95%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  transition: all .3s ease;
 
   h1{
-    font-size: 1.25rem;
+    font-size: 2rem;
     color: white;
   }
 
-
-  @media screen and (max-width: 900px){
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 100%;
+  @media screen and (min-width: 700px){
+    position: initial;
+    transform: none;
   }
 `
 
@@ -134,7 +72,7 @@ export const Button = styled.button`
   color: hsl(229, 64%, 46%);
   border: none;
   padding: 1rem;
-  width: 100%;
+  width: 75%;
   font-weight: 700;
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 1.25rem;
