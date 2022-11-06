@@ -7,7 +7,7 @@ export const Container = styled.section`
   margin-top: 1rem;
   display: flex;
 
-  @media screen and (min-width: 700px){
+  @media screen and (min-width: 900px){
     width: 50%;
   }
 `
@@ -20,16 +20,21 @@ export const Title = styled.div`
     font-size: 1.8rem;
   }
 
+  @media screen and (min-width: 700px){
+    h1{
+      font-size: 2.5rem;
+    }
+  }
 `
 
 export const ScoreContainer = styled.div`
-  width: 40%;
+  width: 100%;
   height: 100%;
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 2rem .5rem;
+  justify-content: flex-end;
+  padding: 1.5rem 1rem;
 
 `
 
@@ -51,5 +56,9 @@ export const Score = styled.div`
     font-size: 1.2rem;
     color: hsl(229, 64%, 46%);
     letter-spacing: 2px;
+  }
+
+  @media screen and (min-width: 400px){
+    width: 150px;
   }
 `
