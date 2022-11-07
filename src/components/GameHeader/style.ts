@@ -8,6 +8,10 @@ export const Container = styled.section`
   display: flex;
 
   @media screen and (min-width: 900px){
+    width: 75%;
+  }
+
+  @media screen and (min-width: 1200px){
     width: 50%;
   }
 `

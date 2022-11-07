@@ -5,12 +5,12 @@ interface IProps {
 }
 
 export const Border = styled.div<IProps>`
-  background-image: ${props => `linear-gradient(${props.borderColor![0]}, ${props.borderColor![1]})`};
+  background-image: ${props => `linear-gradient(${props.borderColor[0]}, ${props.borderColor[1]})`};
   width: 150px;
   height: 150px;
   border-radius: 50%;
   display: flex;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
   cursor: pointer;
 

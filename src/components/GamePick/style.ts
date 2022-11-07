@@ -10,7 +10,10 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column-reverse;
+
+  @media screen and (min-width: 700px){
+    padding: 1rem;
+  }
 `
 export const Wrapper = styled.div<IProps>`
   width: ${props => props.shouldTransition ? '100%' : '85%'};
@@ -42,6 +45,14 @@ export const PlayContent = styled.div`
     text-align: center;
     color: white;
     font-weight: bold;
+  }
+
+  @media screen and (min-width: 700px){
+    flex-direction: column;
+    gap: 2rem;
+    h1{
+      font-size: 1.5rem;
+    }
   }
 `
 
@@ -80,6 +91,7 @@ export const Button = styled.button`
   border-radius: 8px;
   border: 2px solid transparent;
   cursor: pointer;
+  margin-top: 1rem;
   transition: all .3s ease;
 
   &:hover{
