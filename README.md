@@ -4,7 +4,7 @@
 
 Users should be able to:
 
-- Search for a country using an input field
+- Play Rock, Paper, Scissors
 
 ## Screenshot of the final solution
 
